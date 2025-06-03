@@ -1,0 +1,99 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f7f8;
+}
+
+/* Header */
+header {
+  background-color: #1b2a41;
+  width: 100%;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo-img {
+  height: 100px;
+}
+
+/* Theme buttons */
+.theme-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.theme-btn {
+  width: 16px;
+  height: 16px;
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.theme-btn.lightblue {
+  background-color: #f4f7f8;
+}
+.theme-btn.mint {
+  background-color: #e2f4f3;
+}
+.theme-btn.grayblue {
+  background-color: #e9ecef;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #f4f7f8;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.5s ease;
+}
+
+.nav-links a:hover {
+  color: #dfe0e0;
+  transform: scale(1.02);
+  text-decoration: underline;
+}
+
+/* Botao menu hamburguer */
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f4f7f8;
+  font-size: 24px;
+}
+
+/* Mobile menu */
+.menu-mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+.menu-mobile a {
+  color: #f4f7f8;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.hidden {
+  display: none;
+}
