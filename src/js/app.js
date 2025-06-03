@@ -16,3 +16,8 @@ menuBtn.addEventListener("click", () => {
     menuBtn.innerHTML = "&#9776;";
   }
 });
+
+// Trocar cor de fundo
+function changeBackground(color) {
+  document.body.style.backgroundColor = color;
+}
