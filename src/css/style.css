@@ -97,3 +97,18 @@ header {
 .hidden {
   display: none;
 }
+
+/* Responsividade */
+@media (max-width: 1100px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .theme-buttons {
+    display: none;
+  }
+}
