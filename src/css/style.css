@@ -10,7 +10,9 @@ body {
   background-color: #f4f7f8;
 }
 
+/* ========================= */
 /* Header */
+/* ========================= */
 header {
   background-color: #1b2a41;
   width: 100%;
@@ -27,7 +29,6 @@ header {
   height: 100px;
 }
 
-/* Theme buttons */
 .theme-buttons {
   display: flex;
   gap: 10px;
@@ -51,7 +52,6 @@ header {
   background-color: #e9ecef;
 }
 
-/* Nav links */
 .nav-links {
   display: flex;
   gap: 20px;
@@ -70,7 +70,6 @@ header {
   text-decoration: underline;
 }
 
-/* Botao menu hamburguer */
 .menu-btn {
   display: none;
   background: none;
@@ -80,7 +79,6 @@ header {
   font-size: 24px;
 }
 
-/* Mobile menu */
 .menu-mobile {
   display: flex;
   flex-direction: column;
@@ -98,7 +96,106 @@ header {
   display: none;
 }
 
+/* ========================= */
+/* Público Alvo */
+/* ========================= */
+
+#publico-alvo {
+  background-color: #1b2a41;
+  color: #ffffff;
+  padding: 60px 40px;
+}
+
+.container-publico-alvo {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+
+.quadro-imagens-publico-alvo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  flex: 1;
+  min-width: 350px;
+}
+
+.quadro-imagens-publico-alvo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.conteudo-direita-publico-alvo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+  min-width: 350px;
+}
+
+.conteudo-publico-alvo {
+  width: 100%;
+  text-align: left;
+}
+
+.conteudo-publico-alvo h2 {
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.cards-publico-alvo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cards-publico-alvo article {
+  background-color: #2a3442;
+  border-radius: 10px;
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.cards-publico-alvo article:hover {
+  transform: translateY(-5px);
+}
+
+.cards-publico-alvo article img {
+  width: 60px;
+  height: 60px;
+}
+
+.cards-publico-alvo article p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #d1d1d1;
+}
+
+/* ========================= */
 /* Responsividade */
+/* ========================= */
+
+@media (min-width: 900px) {
+  .cards-publico-alvo {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 1100px) {
   .nav-links {
     display: none;
@@ -108,3 +205,11 @@ header {
     display: block;
   }
 }
+@media (min-width: 900px) {
+  .container-publico-alvo {
+    flex-wrap: nowrap;
+  }
+}
+  .cards-publico-alvo {
+    flex-direction: column;
+  }
