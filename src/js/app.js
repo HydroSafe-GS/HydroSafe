@@ -24,6 +24,7 @@ function changeBackground(color) {
 
 // Quiz
 
+// Array de perguntas e respostas
 const questions = [
   {
     text: "1. O que é uma enchente?",
@@ -127,9 +128,10 @@ const questions = [
   },
 ];
 
-let currentQuestion = 0;
-let userAnswers = new Array(questions.length).fill(null);
+let currentQuestion = 0; // Questão atual
+let userAnswers = new Array(questions.length).fill(null); // Array de respostas do usuário, inicializada com null
 
+// Elementos do dom
 const startBtn = document.querySelector(".start-btn");
 const quizBox = document.querySelector(".quiz-box");
 const questionText = document.querySelector(".question-text");
@@ -138,6 +140,7 @@ const nextBtn = document.querySelector("#next");
 const prevBtn = document.querySelector("#prev");
 const finishBtn = document.querySelector("#finish");
 
+// Inicia o quiz
 startBtn.addEventListener("click", () => {
   startBtn.classList.add("hidden");
   quizBox.classList.remove("hidden");
@@ -145,36 +148,42 @@ startBtn.addEventListener("click", () => {
   showQuestion();
 });
 
+// Exibe a questão atual e suas opções de resposta
 function showQuestion() {
   const question = questions[currentQuestion];
   questionText.textContent = question.text;
 
-  answersContainer.innerHTML = "";
+  answersContainer.innerHTML = ""; // Limpas as alternativas anteriores
 
   question.options.forEach((option, index) => {
-    const answerBtn = document.createElement("button");
+    const answerBtn = document.createElement("button"); // Cria o botão para as alternativas
     answerBtn.textContent = option;
     answerBtn.classList.add("option-btn");
 
+    // Se o usuário já respondeu essa pergunta, marca a resposta selecionada anteriormente
     if (userAnswers[currentQuestion] === index) {
       answerBtn.classList.add("selected");
     }
 
+    // Ao clicar na resposta, salva ela na lista de respostas do usuário
     answerBtn.addEventListener("click", () => selectAnswer(index));
     answersContainer.appendChild(answerBtn);
   });
 
+  // Exibe e esconde os botões de navegação de acordo com a questão atual
   prevBtn.style.display = currentQuestion > 0 ? "inline-block" : "none";
   nextBtn.style.display =
     currentQuestion < questions.length - 1 ? "inline-block" : "none";
   finishBtn.classList.toggle("hidden", currentQuestion < questions.length - 1);
 }
 
+// Salva a resposta e exibe a próxima questão
 function selectAnswer(index) {
   userAnswers[currentQuestion] = index;
   showQuestion();
 }
 
+// Botões de navegação
 nextBtn.addEventListener("click", () => {
   if (currentQuestion < questions.length - 1) {
     currentQuestion++;
@@ -189,11 +198,14 @@ prevBtn.addEventListener("click", () => {
   }
 });
 
+// Finaliza o quiz e exibe o resultado
 finishBtn.addEventListener("click", () => {
+  // Se ele não respondeu todas as perguntas, exibe um alerta
   if (userAnswers.includes(null)) {
     alert("Por favor, responda todas as perguntas antes de finalizar o quiz.");
     return;
   }
+  // Calcula a pontuação final do usuário
   let score = 0;
   userAnswers.forEach((answer, index) => {
     if (answer === questions[index].correct) {
@@ -201,6 +213,7 @@ finishBtn.addEventListener("click", () => {
     }
   });
 
+  // Exibe a pontuação final
   quizBox.innerHTML = `
     <h3>Você acertou ${score} de ${questions.length} perguntas!</h3>
     <p>Parabéns por participar! Continue aprendendo sobre prevenção de enchentes.</p>
