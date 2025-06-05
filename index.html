@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="./src/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"
     />
   </head>
   <body>
@@ -72,52 +70,74 @@
           a segurança.
         </h1>
       </section>
-      <section id="publico-alvo">
-        <div class="container-publico-alvo">
-          <!-- Imagens -->
-          <div class="quadro-imagens-publico-alvo">
-            <img
-              src="./src/assets/imgs/prefeitura-publico-alvo.png"
-              alt="Prédio da prefeitura de Porto Alegre alagado"
-            />
-            <img
-              src="./src/assets/imgs/defesa-civil-publico-alvo.png"
-              alt="Equipe da defesa civil em atuação"
-            />
-            <img
-              src="./src/assets/imgs/agente-comunitario-publico-alvo.png"
-              alt="Agente comunitário verificando a área"
-            />
-            <img
-              src="./src/assets/imgs/comunidades-publico-alvo.png"
-              alt="Moradores sendo resgatados em enchentes"
-            />
-          </div>
+      
+      <section id="objetivos">  
+          <h2>Nosso Objetivo</h2>
+          <div class="slideshow-container">
 
-          <!-- Conteudo texto + titulo + card a direita -->
-          <div class="conteudo-direita-publico-alvo">
-            <div class="conteudo-publico-alvo">
-              <h2>Para quem é o Hydro Safe?</h2>
+            <div class="slide-fade">
+              <div class="card-slide">
+                <img src="/src/assets/imgs/alerta.png" alt="">
+                <h3>Alertas Eficazes e Imediatos </h3>
+                <p>Emitir alarmes sonoros, visuais e notificações para dispositivos móveis quando há risco iminente.</p>
+              </div>
             </div>
-            <div class="cards-publico-alvo">
-              <article class="icone-esquerda-publico">
-                <img src="./src/assets/imgs/icone-1-publico-alvo.png" alt="" />
-                <p>
-                  Oferecemos soluções para moradores, prefeituras e agentes que
-                  lidam com desastres naturais e situações de risco.
-                </p>
-              </article>
-              <article>
-                <img src="./src/assets/imgs/icone-2-publico-alvo.png" alt="" />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-                  maxime dolorum explicabo consequuntur fuga voluptatem!
-                </p>
-              </article>
+
+            <div class="slide-fade">
+              <div class="card-slide">
+                <img src="/src/assets/imgs/desinformação.png" alt="">
+                <h3>Combater a Desinformação</h3>
+                <p>Fornecer informações precisas e confiáveis para a população e autoridades, prevenindo desastres.</p>
+              </div>
             </div>
+
+            <div class="slide-fade">
+              <div class="card-slide">
+                <img src="/src/assets/imgs/proteção-a-vidas.png" alt="">
+                <h3>Prevenção e Confiabilidade</h3>
+                <p>Criar um sistema confiável e preventivo que garanta segurança e tranquilidade para todos.</p>
+              </div>
+            </div>
+
+            <a class="seta anterior" onclick="mudarSlide(-1)">
+              <img src="./src/assets/imgs/seta-esquerda.png" alt="">
+            </a>
+            <a class="seta proximo" onclick="mudarSlide(1)">
+              <img src="./src/assets/imgs/seta-direita.png" alt="">
+            </a>
+
           </div>
-        </div>
       </section>
+      
+    <section id="publico-alvo">
+            <div class="container-publico-alvo">
+
+                <!-- Imagens -->
+                <div class="quadro-imagens-publico-alvo">
+                    <img src="./src/assets/imgs/prefeitura-publico-alvo.png" alt="Prédio da prefeitura de Porto Alegre alagado">
+                    <img src="./src/assets/imgs/defesa-civil-publico-alvo.png" alt="Equipe da defesa civil em atuação">
+                    <img src="./src/assets/imgs/agente-comunitario-publico-alvo.png" alt="Agente comunitário verificando a área">
+                    <img src="./src/assets/imgs/comunidades-publico-alvo.png" alt="Moradores sendo resgatados em enchentes">
+                </div>
+
+                <!-- Conteudo texto + titulo + card a direita -->
+                 <div class="conteudo-direita-publico-alvo">
+                  <div class="conteudo-publico-alvo">
+                    <h2>Para quem é o Hydro Safe?</h2>
+                  </div>
+                  <div class="cards-publico-alvo">
+                    <article class="icone-esquerda-publico">
+                      <img src="./src/assets/imgs/icone-1-publico-alvo.png" alt="">
+                      <p>Oferecemos soluções para comunidades e autoridades enfrentarem desastres naturais e áreas de risco com segurança e eficácia.</p>
+                    </article>
+                    <article>
+                      <img src="./src/assets/imgs/icone-2-publico-alvo.png" alt="">
+                      <p>Trabalhamos junto a órgãos públicos para promover proteção preventiva, monitoramento contínuo e ações seguras em emergências.</p>
+                    </article>
+                  </div>
+                 </div>
+        </section>
+      
       <section id="quiz">
         <h2>Você está pronto para enfrentar as enchentes?</h2>
         <p>
@@ -148,3 +168,4 @@
   </body>
   <script src="/src/js/app.js"></script>
 </html>
+
