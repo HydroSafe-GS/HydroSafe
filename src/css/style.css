@@ -101,7 +101,7 @@ header {
 /* ========================= */
 
 #publico-alvo {
-  background-color: #1b2a41;
+  /* background-color: #1b2a41; */
   color: #ffffff;
   padding: 60px 40px;
 }
@@ -147,7 +147,7 @@ header {
 
 .conteudo-publico-alvo h2 {
   font-size: 28px;
-  color: #ffffff;
+  color: #1b2a41;
   margin-bottom: 10px;
 }
 
@@ -190,7 +190,7 @@ header {
 /* ========================= */
 
 #objetivos {
-  background-color: #1f2733;
+  /* background-color: #1f2733; */
   color: #ffffff;
   padding: 60px 30px;
   text-align: center;
@@ -202,6 +202,7 @@ header {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  color: #1b2a41;
 }
 
 .slideshow-container {
@@ -229,11 +230,10 @@ header {
 }
 
 .card-slide img {
-  width: 100%;
+  width: 80%;
   height: auto;
   max-height: 400px;
-  object-fit: contain;
-  border-radius: 8px;
+  border-radius: 10px;
   display: block;
   margin: 0 auto;
 }
