@@ -97,94 +97,27 @@ header {
 }
 
 /* ========================= */
-/* Público Alvo */
+/* Banner */
 /* ========================= */
-
-#publico-alvo {
-  /* background-color: #1b2a41; */
-  color: #ffffff;
-  padding: 60px 40px;
-}
-
-.container-publico-alvo {
-  max-width: 1300px;
-  margin: 0 auto;
+#banner {
   display: flex;
-  gap: 40px;
   justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-
-.quadro-imagens-publico-alvo {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  flex: 1;
-  min-width: 350px;
-}
-
-.quadro-imagens-publico-alvo img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.conteudo-direita-publico-alvo {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  flex: 1;
-  min-width: 350px;
-}
-
-.conteudo-publico-alvo {
-  width: 100%;
-  text-align: left;
-}
-
-.conteudo-publico-alvo h2 {
-  font-size: 28px;
-  color: #1b2a41;
-  margin-bottom: 10px;
-}
-
-.cards-publico-alvo {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.cards-publico-alvo article {
-  background-color: #2a3442;
-  border-radius: 10px;
-  padding: 30px 25px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  background-image: url(../assets/imgs/banner-intro.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  padding: 0 20px;
+}
+
+.banner-text {
+  color: #f4f7f8;
+  font-size: 20px;
+  font-weight: 200;
   text-align: center;
-  gap: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease;
 }
-
-.cards-publico-alvo article:hover {
-  transform: translateY(-5px);
-}
-
-.cards-publico-alvo article img {
-  width: 60px;
-  height: 60px;
-}
-
-.cards-publico-alvo article p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #d1d1d1;
-}
-
 /* ========================= */
 /* Nossos Objetivos */
 /* ========================= */
@@ -296,6 +229,208 @@ header {
   from { opacity: 0.4; }
   to { opacity: 1; }
 }
+/* ========================= */
+/* Público Alvo */
+/* ========================= */
+
+#publico-alvo {
+  /* background-color: #1b2a41; */
+  color: #ffffff;
+  padding: 60px 40px;
+}
+
+.container-publico-alvo {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.quadro-imagens-publico-alvo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  flex: 1;
+  min-width: 350px;
+}
+
+.quadro-imagens-publico-alvo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.conteudo-direita-publico-alvo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+  min-width: 350px;
+}
+
+.conteudo-publico-alvo {
+  width: 100%;
+  text-align: left;
+}
+
+.conteudo-publico-alvo h2 {
+  font-size: 28px;
+  color: #1b2a41;
+  margin-bottom: 10px;
+}
+
+.cards-publico-alvo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cards-publico-alvo article {
+  background-color: #2a3442;
+  border-radius: 10px;
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.cards-publico-alvo article:hover {
+  transform: translateY(-5px);
+}
+
+.cards-publico-alvo article img {
+  width: 60px;
+  height: 60px;
+}
+
+.cards-publico-alvo article p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #d1d1d1;
+}
+
+
+/* ========================= */
+/* Quiz */
+/* ========================= */
+#quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+#quiz h2 {
+  color: #1b2a41;
+  text-align: center;
+  font-size: 28px;
+}
+
+#quiz p {
+  color: #1b2a41;
+  text-align: center;
+}
+
+.start-btn {
+  background-color: #2a3442;
+  color: #f4f7f8;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 400px;
+  transition: 0.3s ease-in-out;
+  font-size: 16px;
+}
+
+.start-btn:hover {
+  background-color: #212833;
+}
+
+.quiz-box {
+  background-color: #C6CBD0;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  padding: 20px 10px;
+}
+
+.answers-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.option-btn {
+  border: none;
+  border-radius: 7px;
+  background-color: #f4f7f8;
+  color: #1b2a41;
+  cursor: pointer;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 400px;
+  transition: 0.3s ease;
+}
+
+.option-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.option-btn.selected {
+  background-color: #2a3442;
+  color: #f4f7f8;
+  transform: scale(1.02);
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.quiz-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  background-color: #2a3442;
+  color: #f4f7f8;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #212833;
+}
+
+/* ========================= */
+/* Footer */
+/* ========================= */
+footer {
+  background-color: #1b2a41;
+  color: #f4f7f8;
+  padding: 8px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+}
 
 /* ========================= */
 /* Responsividade */
@@ -349,6 +484,6 @@ header {
     flex-wrap: nowrap;
   }
 }
-  .cards-publico-alvo {
-    flex-direction: column;
-  }
+.cards-publico-alvo {
+  flex-direction: column;
+}

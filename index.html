@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hydro Safe</title>
-    <link rel="icon" href="./src/assets/imgs/logo-hydro-safe.png">
+    <link rel="icon" href="./src/assets/imgs/logo-hydro-safe.png" />
     <link rel="stylesheet" href="./src/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,9 +24,18 @@
         </a>
         <!-- Botoes de tema  -->
         <div class="theme-buttons">
-          <button onclick="changeBackground('#f4f7f8')" class="theme-btn lightblue"></button>
-          <button onclick="changeBackground('#e2f4f3')" class="theme-btn mint"></button>
-          <button onclick="changeBackground('#e9ecef')" class="theme-btn grayblue"></button>
+          <button
+            onclick="changeBackground('#f4f7f8')"
+            class="theme-btn lightblue"
+          ></button>
+          <button
+            onclick="changeBackground('#e2f4f3')"
+            class="theme-btn mint"
+          ></button>
+          <button
+            onclick="changeBackground('#e9ecef')"
+            class="theme-btn grayblue"
+          ></button>
         </div>
         <!-- Menu desktop -->
         <nav class="nav-links">
@@ -55,36 +64,14 @@
       </nav>
     </header>
     <main>
-    <section id="publico-alvo">
-            <div class="container-publico-alvo">
-
-                <!-- Imagens -->
-                <div class="quadro-imagens-publico-alvo">
-                    <img src="./src/assets/imgs/prefeitura-publico-alvo.png" alt="Prédio da prefeitura de Porto Alegre alagado">
-                    <img src="./src/assets/imgs/defesa-civil-publico-alvo.png" alt="Equipe da defesa civil em atuação">
-                    <img src="./src/assets/imgs/agente-comunitario-publico-alvo.png" alt="Agente comunitário verificando a área">
-                    <img src="./src/assets/imgs/comunidades-publico-alvo.png" alt="Moradores sendo resgatados em enchentes">
-                </div>
-
-                <!-- Conteudo texto + titulo + card a direita -->
-                 <div class="conteudo-direita-publico-alvo">
-                  <div class="conteudo-publico-alvo">
-                    <h2>Para quem é o Hydro Safe?</h2>
-                  </div>
-                  <div class="cards-publico-alvo">
-                    <article class="icone-esquerda-publico">
-                      <img src="./src/assets/imgs/icone-1-publico-alvo.png" alt="">
-                      <p>Oferecemos soluções para comunidades e autoridades enfrentarem desastres naturais e áreas de risco com segurança e eficácia.</p>
-                    </article>
-                    <article>
-                      <img src="./src/assets/imgs/icone-2-publico-alvo.png" alt="">
-                      <p>Trabalhamos junto a órgãos públicos para promover proteção preventiva, monitoramento contínuo e ações seguras em emergências.</p>
-                    </article>
-                  </div>
-                 </div>
-        </section>
-
-    <section id="objetivos">  
+      <section id="banner">
+        <h1 class="banner-text">
+          Quando a água ultrapassa os limites, a prevenção é a única ponte para
+          a segurança.
+        </h1>
+      </section>
+      
+      <section id="objetivos">  
           <h2>Nosso Objetivo</h2>
           <div class="slideshow-container">
 
@@ -121,8 +108,63 @@
 
           </div>
       </section>
+      
+    <section id="publico-alvo">
+            <div class="container-publico-alvo">
+
+                <!-- Imagens -->
+                <div class="quadro-imagens-publico-alvo">
+                    <img src="./src/assets/imgs/prefeitura-publico-alvo.png" alt="Prédio da prefeitura de Porto Alegre alagado">
+                    <img src="./src/assets/imgs/defesa-civil-publico-alvo.png" alt="Equipe da defesa civil em atuação">
+                    <img src="./src/assets/imgs/agente-comunitario-publico-alvo.png" alt="Agente comunitário verificando a área">
+                    <img src="./src/assets/imgs/comunidades-publico-alvo.png" alt="Moradores sendo resgatados em enchentes">
+                </div>
+
+                <!-- Conteudo texto + titulo + card a direita -->
+                 <div class="conteudo-direita-publico-alvo">
+                  <div class="conteudo-publico-alvo">
+                    <h2>Para quem é o Hydro Safe?</h2>
+                  </div>
+                  <div class="cards-publico-alvo">
+                    <article class="icone-esquerda-publico">
+                      <img src="./src/assets/imgs/icone-1-publico-alvo.png" alt="">
+                      <p>Oferecemos soluções para comunidades e autoridades enfrentarem desastres naturais e áreas de risco com segurança e eficácia.</p>
+                    </article>
+                    <article>
+                      <img src="./src/assets/imgs/icone-2-publico-alvo.png" alt="">
+                      <p>Trabalhamos junto a órgãos públicos para promover proteção preventiva, monitoramento contínuo e ações seguras em emergências.</p>
+                    </article>
+                  </div>
+                 </div>
+        </section>
+      
+      <section id="quiz">
+        <h2>Você está pronto para enfrentar as enchentes?</h2>
+        <p>
+          Descubra o quanto você sabe sobre prevenção de enchentes e a
+          tecnologia da HydroSafe.
+        </p>
+        <button class="start-btn">Começar quiz</button>
+        <!-- Caixa do quiz -->
+        <div class="hidden quiz-box">
+          <!-- Container onde a pergunta será exibida -->
+          <div class="question-container">
+            <p class="question-text">Pergunta</p>
+          </div>
+          <!-- Container onde as respostas serão exibidas -->
+          <div class="answers-container"></div>
+          <!-- Container com botões de navegação -->
+          <div class="quiz-controls">
+            <button id="prev" class="nav-btn">&#8249;</button>
+            <button id="next" class="nav-btn">&#8250;</button>
+            <button id="finish" class="nav-btn hidden">Finalizar</button>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <p>HydroSafe © 2025 — Tecnologia e prevenção para comunidades mais seguras.</p>
+    </footer>
   </body>
   <script src="/src/js/app.js"></script>
 </html>
