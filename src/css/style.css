@@ -308,6 +308,20 @@ header {
 }
 
 /* ========================= */
+/* Footer */
+/* ========================= */
+footer {
+  background-color: #1b2a41;
+  color: #f4f7f8;
+  padding: 8px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* ========================= */
 /* Responsividade */
 /* ========================= */
 
