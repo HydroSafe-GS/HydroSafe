@@ -65,6 +65,7 @@
         <a href="#contato">Contatos</a>
       </nav>
     </header>
+
     <main>
       <section id="banner">
         <h1 class="banner-text">
@@ -72,6 +73,7 @@
           a segurança.
         </h1>
       </section>
+
       <section id="desafios">
         <h2>Os desafios das cidades diante das inundações</h2>
         <div class="container">
@@ -217,6 +219,30 @@
         </div>
       </section>
 
+      <section id="quiz">
+        <h2>Você está pronto para enfrentar as enchentes?</h2>
+        <p>
+          Descubra o quanto você sabe sobre prevenção de enchentes e a
+          tecnologia da HydroSafe.
+        </p>
+        <button class="start-btn">Começar quiz</button>
+        <!-- Caixa do quiz -->
+        <div class="hidden quiz-box">
+          <!-- Container onde a pergunta será exibida -->
+          <div class="question-container">
+            <p class="question-text">Pergunta</p>
+          </div>
+          <!-- Container onde as respostas serão exibidas -->
+          <div class="answers-container"></div>
+          <!-- Container com botões de navegação -->
+          <div class="quiz-controls">
+            <button id="prev" class="nav-btn">&#8249;</button>
+            <button id="next" class="nav-btn">&#8250;</button>
+            <button id="finish" class="nav-btn hidden">Finalizar</button>
+          </div>
+        </div>
+      </section>
+
       <section id="contato">
         <div class="contato-container">
           <div class="contato-info">
@@ -250,30 +276,6 @@
             ></textarea>
             <button type="submit">Enviar</button>
           </form>
-        </div>
-      </section>
-
-      <section id="quiz">
-        <h2>Você está pronto para enfrentar as enchentes?</h2>
-        <p>
-          Descubra o quanto você sabe sobre prevenção de enchentes e a
-          tecnologia da HydroSafe.
-        </p>
-        <button class="start-btn">Começar quiz</button>
-        <!-- Caixa do quiz -->
-        <div class="hidden quiz-box">
-          <!-- Container onde a pergunta será exibida -->
-          <div class="question-container">
-            <p class="question-text">Pergunta</p>
-          </div>
-          <!-- Container onde as respostas serão exibidas -->
-          <div class="answers-container"></div>
-          <!-- Container com botões de navegação -->
-          <div class="quiz-controls">
-            <button id="prev" class="nav-btn">&#8249;</button>
-            <button id="next" class="nav-btn">&#8250;</button>
-            <button id="finish" class="nav-btn hidden">Finalizar</button>
-          </div>
         </div>
       </section>
     </main>
