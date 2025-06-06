@@ -230,6 +230,107 @@ header {
   to { opacity: 1; }
 }
 /* ========================= */
+/* Desafios */
+/* ========================= */
+
+.inundacoes {
+  background-color: #0f2239;
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.inundacoes h2 {
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+.imagem img {
+  width: 400px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.texto {
+  background-color: #e9eff5;
+  color: #0f2239;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 20px;
+}
+
+/* ========================= */
+/* Tecnologias */
+/* ========================= */
+
+.tecnologia {
+  background-color: #f2f8fa;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.tecnologia h2 {
+  color: #1b2a41;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.container-tecnologias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #d0d6db;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  height: 300px;
+  display: flow;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 40px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #1b2a41;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.center-image img {
+  width: 160px;
+}
+
+/* ========================= */
 /* Público Alvo */
 /* ========================= */
 
@@ -319,6 +420,104 @@ header {
 
 
 /* ========================= */
+/* Contato */
+/* ========================= */
+
+#contato {
+  background: linear-gradient(to bottom, #3d5a80, #1b2a41);
+  padding: 60px 20px;
+  color: #ffffff;
+}
+
+.contato-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.contato-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contato-info h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.contato-info p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.icones-sociais {
+  margin-top: 20px;
+}
+
+.icones-sociais a img {
+  width: 24px;
+  margin-right: 12px;
+  transition: transform 0.3s ease;
+  filter: brightness(0) invert(1); /* deixa branco */
+}
+
+.icones-sociais a img:hover {
+  transform: scale(1.1);
+}
+
+/* Formulário */
+.formulario-contato {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-contato small {
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #cccccc;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #000000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formulario-contato textarea {
+  resize: none;
+  height: 100px;
+}
+
+.formulario-contato button {
+  width: 100px;
+  padding: 8px;
+  border: none;
+  background-color: #ffffff;
+  color: #1b2a41;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contato button:hover {
+  background-color: #d9d9d9;
+}
+
+/* ========================= */
 /* Quiz */
 /* ========================= */
 #quiz {
@@ -358,7 +557,7 @@ header {
 }
 
 .quiz-box {
-  background-color: #C6CBD0;
+  background-color: #c6cbd0;
   flex-direction: column;
   align-items: center;
   gap: 18px;
