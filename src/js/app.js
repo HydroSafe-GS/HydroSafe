@@ -306,3 +306,52 @@ finishBtn.addEventListener("click", () => {
   `;
 });
 
+//////////////
+// impactos///
+/////////////
+
+const impactos = document.querySelectorAll(".bola");
+
+// Textos diferentes para cada bola
+const textos = {
+  "primeira-bola": "Notificações enviadas por app mantêm todos informados em tempo real.",
+  "segunda-bola": "Buzina de emergência nas ruas: um sinal claro que pode salvar vidas.",
+  "terceira-bola": "Defesa civil e agentes comunitários agem com base em dados e alertas locais.",
+  "quarta-bola": "O sistema acompanha chuvas e rios 24h por dia, garantindo segurança contínua."
+};
+
+impactos.forEach((bola) => {
+  const bolaClasse = Array.from(bola.classList).find(classe => classe.endsWith('-bola'));
+  const titulo = bola.querySelector('h3'); // pega o título da bola
+
+  bola.addEventListener("mouseenter", () => {
+    // Esconde o título
+    if (titulo) {
+      titulo.style.display = "none";
+    }
+    // Cria e exibe o texto
+    const texto = document.createElement("p");
+    texto.textContent = textos[bolaClasse] || "Informação não disponível.";
+    texto.classList.add("texto-hover");
+    bola.appendChild(texto);
+  });
+  bola.addEventListener("mouseleave", () => {
+    // Mostra o título de volta
+    if (titulo) {
+      titulo.style.display = "block";
+    }
+    // Remove o texto criado
+    const texto = bola.querySelector(".texto-hover");
+    if (texto) {
+      bola.removeChild(texto);
+    }
+  });
+  bola.addEventListener("click", () => {
+    bola.classList.toggle("active");
+  });
+});
+
+
+
+
+
