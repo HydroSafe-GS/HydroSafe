@@ -48,8 +48,8 @@ header {
 .theme-btn.mint {
   background-color: #e2f4f3;
 }
-.theme-btn.grayblue {
-  background-color: #e9ecef;
+.theme-btn.lightgray {
+  background-color: #b4b4b4;
 }
 
 .nav-links {
@@ -317,6 +317,90 @@ header {
   color: #d1d1d1;
 }
 
+/* ========================= */
+/* IMPACTOS */
+/* ========================= */
+
+#impactos {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #1B2A41 ;
+}
+
+#impactos h1 {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+#impactos h2 {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.impactos-container {
+  position:relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 600px;
+  margin: 0 auto;
+
+}
+
+.impactos-container div {
+  position: absolute;
+  background-color: #2a3442;
+  color: white;
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 1.5s ease;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.impactos-container div:hover {
+  transform: scale(1.05);
+}
+
+.impactos-container h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #f4f7f8;
+}
+.impactos-container p {
+  font-size: 12px;
+  color: #f4f7f8;
+}
+
+.primeira-bola {
+  top: 10%;
+  left: 10%;
+}
+
+.segunda-bola {
+  left: 10%;
+  bottom: 10%;
+}
+
+.terceira-bola {
+  right: 10%;
+  top: 10%;
+}
+
+.quarta-bola {
+  bottom: 10%;
+  right: 10%;
+}
+
 
 /* ========================= */
 /* Quiz */
@@ -486,4 +570,19 @@ footer p {
 }
 .cards-publico-alvo {
   flex-direction: column;
+}
+
+@media (max-width: 900px) {
+    .impactos-container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .impactos-container div {
+        position: static;
+        transform: none;
+    }
 }
