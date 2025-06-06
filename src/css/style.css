@@ -233,14 +233,14 @@ header {
 /* Desafios */
 /* ========================= */
 
-.inundacoes {
+#desafios {
   background-color: #0f2239;
   color: #ffffff;
   padding: 40px 20px;
   text-align: center;
 }
 
-.inundacoes h2 {
+#desafios h2 {
   margin-bottom: 30px;
   font-size: 30px;
 }
@@ -276,13 +276,12 @@ header {
 /* Tecnologias */
 /* ========================= */
 
-.tecnologia {
-  background-color: #f2f8fa;
+#tecnologias {
   padding: 50px 20px;
   text-align: center;
 }
 
-.tecnologia h2 {
+#tecnologias h2 {
   color: #1b2a41;
   margin-bottom: 40px;
   font-size: 20px;
