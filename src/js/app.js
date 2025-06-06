@@ -1,4 +1,4 @@
-// Menu hamburguer
+
 const menuBtn = document.querySelector(".menu-btn");
 const mobileMenu = document.querySelector(".menu-mobile");
 
@@ -17,41 +17,38 @@ menuBtn.addEventListener("click", () => {
   }
 });
 
-// Trocar cor de fundo
+
 function changeBackground(color) {
   document.body.style.backgroundColor = color;
 }
-// Formulário de contato
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("form-contato")
 
   form.addEventListener("submit", function (e) {
-    e.preventDefault() // Impede o envio padrão
+    e.preventDefault() 
 
-    // Pega os valores
+
     const nome = document.getElementById("nome").value.trim()
     const email = document.getElementById("email").value.trim()
     const mensagem = document.getElementById("mensagem").value.trim()
 
-    // Validação simples
+
     if (!nome || !email || !mensagem) {
       alert("Por favor, preencha todos os campos.")
       return
     }
 
-    // Validação de e-mail básica
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
       alert("Por favor, insira um e-mail válido.")
       return
     }
 
-    // Aqui você poderia enviar os dados para um servidor...
-    // Exemplo: fetch('url-api', { method: 'POST', body: JSON.stringify({ nome, email, mensagem }) })
 
-    // Simula envio
     alert("Mensagem enviada com sucesso!")
-    form.reset() // Limpa o formulário
+    form.reset() 
   })
 })
 
@@ -62,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
 let slideIndex = 0;
 let timeout;
 
-// Função para mostrar os slides automaticamente
 function mostrarSlides() {
   const slides = document.getElementsByClassName("slide-fade");
 
@@ -77,12 +73,11 @@ function mostrarSlides() {
 
   slides[slideIndex - 1].style.display = "block";
 
-  timeout = setTimeout(mostrarSlides, 5000); // Troca automática a cada 5 segundos
+  timeout = setTimeout(mostrarSlides, 5000); 
 }
 
-// Função para mudar manualmente os slides
 function mudarSlide(n) {
-  clearTimeout(timeout); // Para temporariamente o automático
+  clearTimeout(timeout); 
 
   slideIndex += n;
   const slides = document.getElementsByClassName("slide-fade");
@@ -100,17 +95,15 @@ function mudarSlide(n) {
 
   slides[slideIndex - 1].style.display = "block";
 
-  timeout = setTimeout(mostrarSlides, 5000); // Retoma o automático
+  timeout = setTimeout(mostrarSlides, 5000);
 }
 
-// Inicia o slideshow quando a página carrega
 document.addEventListener("DOMContentLoaded", mostrarSlides);
 
 ///////////
 // Quiz //
 //////////
 
-// Array de perguntas e respostas
 const questions = [
   {
     text: "1. O que é uma enchente?",
@@ -214,10 +207,9 @@ const questions = [
   },
 ];
 
-let currentQuestion = 0; // Questão atual
-let userAnswers = new Array(questions.length).fill(null); // Array de respostas do usuário, inicializada com null
+let currentQuestion = 0; 
+let userAnswers = new Array(questions.length).fill(null); 
 
-// Elementos do dom
 const startBtn = document.querySelector(".start-btn");
 const quizBox = document.querySelector(".quiz-box");
 const questionText = document.querySelector(".question-text");
@@ -226,7 +218,6 @@ const nextBtn = document.querySelector("#next");
 const prevBtn = document.querySelector("#prev");
 const finishBtn = document.querySelector("#finish");
 
-// Inicia o quiz
 startBtn.addEventListener("click", () => {
   startBtn.classList.add("hidden");
   quizBox.classList.remove("hidden");
@@ -234,42 +225,36 @@ startBtn.addEventListener("click", () => {
   showQuestion();
 });
 
-// Exibe a questão atual e suas opções de resposta
 function showQuestion() {
   const question = questions[currentQuestion];
   questionText.textContent = question.text;
 
-  answersContainer.innerHTML = ""; // Limpas as alternativas anteriores
+  answersContainer.innerHTML = ""; 
 
   question.options.forEach((option, index) => {
-    const answerBtn = document.createElement("button"); // Cria o botão para as alternativas
+    const answerBtn = document.createElement("button"); 
     answerBtn.textContent = option;
     answerBtn.classList.add("option-btn");
 
-    // Se o usuário já respondeu essa pergunta, marca a resposta selecionada anteriormente
     if (userAnswers[currentQuestion] === index) {
       answerBtn.classList.add("selected");
     }
 
-    // Ao clicar na resposta, salva ela na lista de respostas do usuário
     answerBtn.addEventListener("click", () => selectAnswer(index));
     answersContainer.appendChild(answerBtn);
   });
 
-  // Exibe e esconde os botões de navegação de acordo com a questão atual
   prevBtn.style.display = currentQuestion > 0 ? "inline-block" : "none";
   nextBtn.style.display =
     currentQuestion < questions.length - 1 ? "inline-block" : "none";
   finishBtn.classList.toggle("hidden", currentQuestion < questions.length - 1);
 }
 
-// Salva a resposta e exibe a próxima questão
 function selectAnswer(index) {
   userAnswers[currentQuestion] = index;
   showQuestion();
 }
 
-// Botões de navegação
 nextBtn.addEventListener("click", () => {
   if (currentQuestion < questions.length - 1) {
     currentQuestion++;
@@ -284,14 +269,13 @@ prevBtn.addEventListener("click", () => {
   }
 });
 
-// Finaliza o quiz e exibe o resultado
+
 finishBtn.addEventListener("click", () => {
-  // Se ele não respondeu todas as perguntas, exibe um alerta
+
   if (userAnswers.includes(null)) {
     alert("Por favor, responda todas as perguntas antes de finalizar o quiz.");
     return;
   }
-  // Calcula a pontuação final do usuário
   let score = 0;
   userAnswers.forEach((answer, index) => {
     if (answer === questions[index].correct) {
@@ -299,7 +283,7 @@ finishBtn.addEventListener("click", () => {
     }
   });
 
-  // Exibe a pontuação final
+
   quizBox.innerHTML = `
     <h3>Você acertou ${score} de ${questions.length} perguntas!</h3>
     <p>Parabéns por participar! Continue aprendendo sobre prevenção de enchentes.</p>
@@ -312,7 +296,7 @@ finishBtn.addEventListener("click", () => {
 
 const impactos = document.querySelectorAll(".bola");
 
-// Textos diferentes para cada bola
+
 const textos = {
   "primeira-bola": "Notificações enviadas por app mantêm todos informados em tempo real.",
   "segunda-bola": "Buzina de emergência nas ruas: um sinal claro que pode salvar vidas.",
@@ -322,25 +306,25 @@ const textos = {
 
 impactos.forEach((bola) => {
   const bolaClasse = Array.from(bola.classList).find(classe => classe.endsWith('-bola'));
-  const titulo = bola.querySelector('h3'); // pega o título da bola
+  const titulo = bola.querySelector('h3'); 
 
   bola.addEventListener("mouseenter", () => {
-    // Esconde o título
+
     if (titulo) {
       titulo.style.display = "none";
     }
-    // Cria e exibe o texto
+
     const texto = document.createElement("p");
     texto.textContent = textos[bolaClasse] || "Informação não disponível.";
     texto.classList.add("texto-hover");
     bola.appendChild(texto);
   });
   bola.addEventListener("mouseleave", () => {
-    // Mostra o título de volta
+
     if (titulo) {
       titulo.style.display = "block";
     }
-    // Remove o texto criado
+
     const texto = bola.querySelector(".texto-hover");
     if (texto) {
       bola.removeChild(texto);
