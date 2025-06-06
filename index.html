@@ -72,6 +72,58 @@
           a segurança.
         </h1>
       </section>
+      <section class="inundacoes">
+        <h2>Os desafios das cidades diante das inundações</h2>
+        <div class="container">
+          <div class="imagem">
+            <img
+              src="./src/assets/imgs/imagemcarroenchente.png"
+              alt="Rua alagada com carros"
+            />
+          </div>
+          <div class="texto">
+            <p>
+              Enchentes causam destruição, perdas e mortes. A falta de alertas
+              agrava a situação em comunidades vulneráveis. Muitas cidades não
+              possuem sistemas eficientes para prever e avisar com antecedência
+              sobre enchentes iminentes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="tecnologia">
+        <h2>Tecnologias que previnem e salvam vidas</h2>
+        <div class="container-tecnologias">
+          <div class="card">
+            <img
+              src="./src/assets/imgs/icone-card-1.png"
+              alt="grafico de dados"
+            />
+            <p>
+              Utilizamos sensores IoT e dados meteorológicos para monitorar
+              níveis de água e prever enchentes rapidamente.
+            </p>
+          </div>
+
+          <div class="center-image">
+            <img
+              src="./src/assets/imgs/image-Photoroom 2.png"
+              alt="Mãos segurando uma gota com circuitos"
+            />
+          </div>
+
+          <div class="card">
+            <img src="./src/assets/imgs/alerta.png" alt="mapa de localização" />
+            <p>
+              O sistema envia alertas em tempo real via aplicativos, alarmes
+              sonoros e visuais, garantindo segurança preventiva para
+              comunidades vulneráveis.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="publico-alvo">
         <div class="container-publico-alvo">
           <!-- Imagens -->
@@ -118,6 +170,42 @@
           </div>
         </div>
       </section>
+
+      <section id="contato">
+        <div class="contato-container">
+          <div class="contato-info">
+            <h3>Entre em contato<br />conosco</h3>
+            <p>Endereço: R. Cordeirano Durand</p>
+            <p>Telefone: +55 11 4002-8922</p>
+            <div class="icones-sociais">
+              <a href="https://www.facebook.com/"
+                ><img src="./src/assets/imgs/facebook-icon.png" alt="Facebook"
+              /></a>
+              <a href="https://www.instagram.com/"
+                ><img
+                  src="./src/assets/imgs/instagram-icon.png"
+                  alt="Instagram"
+              /></a>
+              <a href="https://x.com/"
+                ><img src="./src/assets/imgs/X-icon.png" alt="X(Twitter)"
+              /></a>
+            </div>
+          </div>
+
+          <form id="form-contato" class="formulario-contato">
+            <small>Quando visto sem óticas pessoais é irrelevante</small>
+            <input type="text" id="nome" placeholder="Nome" required />
+            <input type="email" id="email" placeholder="E-mail" required />
+            <textarea id="mensagem"
+              placeholder="Escreva sua mensagem"
+              rows="4"
+              required
+            ></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </section>
+
       <section id="quiz">
         <h2>Você está pronto para enfrentar as enchentes?</h2>
         <p>
@@ -143,7 +231,9 @@
       </section>
     </main>
     <footer>
-      <p>HydroSafe © 2025 — Tecnologia e prevenção para comunidades mais seguras.</p>
+      <p>
+        HydroSafe © 2025 — Tecnologia e prevenção para comunidades mais seguras.
+      </p>
     </footer>
   </body>
   <script src="/src/js/app.js"></script>

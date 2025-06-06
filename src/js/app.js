@@ -21,6 +21,39 @@ menuBtn.addEventListener("click", () => {
 function changeBackground(color) {
   document.body.style.backgroundColor = color;
 }
+// Formulário de contato
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("form-contato")
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault() // Impede o envio padrão
+
+    // Pega os valores
+    const nome = document.getElementById("nome").value.trim()
+    const email = document.getElementById("email").value.trim()
+    const mensagem = document.getElementById("mensagem").value.trim()
+
+    // Validação simples
+    if (!nome || !email || !mensagem) {
+      alert("Por favor, preencha todos os campos.")
+      return
+    }
+
+    // Validação de e-mail básica
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      alert("Por favor, insira um e-mail válido.")
+      return
+    }
+
+    // Aqui você poderia enviar os dados para um servidor...
+    // Exemplo: fetch('url-api', { method: 'POST', body: JSON.stringify({ nome, email, mensagem }) })
+
+    // Simula envio
+    alert("Mensagem enviada com sucesso!")
+    form.reset() // Limpa o formulário
+  })
+})
 
 // Quiz
 
