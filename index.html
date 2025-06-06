@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hydro Safe</title>
+    <link rel="icon" href="./src/assets/imgs/logo-hydro-safe.png" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="menu-container">
+        <!-- Logo -->
+        <a href="#" class="logo">
+          <img
+            src="./src/assets/imgs/logo-dark.png"
+            alt="Logotipo da Hydro Safe"
+            class="logo-img"
+          />
+        </a>
+        <!-- Botoes de tema  -->
+        <div class="theme-buttons">
+          <button
+            onclick="changeBackground('#f4f7f8')"
+            class="theme-btn lightblue"
+          ></button>
+          <button
+            onclick="changeBackground('#e2f4f3')"
+            class="theme-btn mint"
+          ></button>
+          <button
+            onclick="changeBackground('#b4b4b4')"
+            class="theme-btn lightgray"
+          ></button>
+        </div>
+        <!-- Menu desktop -->
+        <nav class="nav-links">
+          <a href="#desafios">Desafios encontrados</a>
+          <a href="#tecnologias">Tecnologias</a>
+          <a href="#objetivos">Objetivos</a>
+          <a href="#publico-alvo">Público-alvo</a>
+          <a href="#beneficios">Benefícios</a>
+          <a href="#impactos">Impactos no dia a dia</a>
+          <a href="#quiz">Quiz</a>
+          <a href="#contato">Contatos</a>
+        </nav>
+        <!-- Botao de menu hamburguer (somente telas menores) -->
+        <button class="menu-btn">&#9776;</button>
+      </div>
+      <!-- Menu mobile -->
+      <nav class="menu-mobile hidden">
+        <a href="#desafios">Desafios encontrados</a>
+        <a href="#tecnologias">Tecnologias</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#publico-alvo">Público-alvo</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#impactos">Impactos no dia a dia</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#contato">Contatos</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="banner">
+        <h1 class="banner-text">
+          Quando a água ultrapassa os limites, a prevenção é a única ponte para
+          a segurança.
+        </h1>
+      </section>
+
+      <section id="desafios">
+        <h2>Os desafios das cidades diante das inundações</h2>
+        <div class="container">
+          <div class="imagem">
+            <img
+              src="./src/assets/imgs/imagemcarroenchente.png"
+              alt="Rua alagada com carros"
+            />
+          </div>
+          <div class="texto">
+            <p>
+              Enchentes causam destruição, perdas e mortes. A falta de alertas
+              agrava a situação em comunidades vulneráveis. Muitas cidades não
+              possuem sistemas eficientes para prever e avisar com antecedência
+              sobre enchentes iminentes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="tecnologias">
+        <h2>Tecnologias que previnem e salvam vidas</h2>
+        <div class="container-tecnologias">
+          <div class="card">
+            <img
+              src="./src/assets/imgs/icone-card-1.png"
+              alt="grafico de dados"
+            />
+            <p>
+              Utilizamos sensores IoT e dados meteorológicos para monitorar
+              níveis de água e prever enchentes rapidamente.
+            </p>
+          </div>
+
+          <div class="center-image">
+            <img
+              src="./src/assets/imgs/image-Photoroom 2.png"
+              alt="Mãos segurando uma gota com circuitos"
+            />
+          </div>
+
+          <div class="card">
+            <img src="./src/assets/imgs/alerta.png" alt="mapa de localização" />
+            <p>
+              O sistema envia alertas em tempo real via aplicativos, alarmes
+              sonoros e visuais, garantindo segurança preventiva para
+              comunidades vulneráveis.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="objetivos">
+        <h2>Nosso Objetivo</h2>
+        <div class="slideshow-container">
+          <div class="slide-fade">
+            <div class="card-slide">
+              <img src="/src/assets/imgs/alerta-card.png" alt="Mão segurando celular simulando alertas" />
+              <h3>Alertas Eficazes e Imediatos</h3>
+              <p>
+                Emitir alarmes sonoros, visuais e notificações para dispositivos
+                móveis quando há risco iminente.
+              </p>
+            </div>
+          </div>
+
+          <div class="slide-fade">
+            <div class="card-slide">
+              <img src="/src/assets/imgs/desinformação.png" alt="Panfleto descrito fake news em cima de ondas" />
+              <h3>Combater a Desinformação</h3>
+              <p>
+                Fornecer informações precisas e confiáveis para a população e
+                autoridades, prevenindo desastres.
+              </p>
+            </div>
+          </div>
+
+          <div class="slide-fade">
+            <div class="card-slide">
+              <img src="/src/assets/imgs/proteção-a-vidas.png" alt="Casal abraçado em meio a enchente de sua casa" />
+              <h3>Prevenção e Confiabilidade</h3>
+              <p>
+                Criar um sistema confiável e preventivo que garanta segurança e
+                tranquilidade para todos.
+              </p>
+            </div>
+          </div>
+
+          <a class="seta anterior" onclick="mudarSlide(-1)">
+            <img src="./src/assets/imgs/seta-esquerda.png" alt="Seta para voltar imagem" />
+          </a>
+          <a class="seta proximo" onclick="mudarSlide(1)">
+            <img src="./src/assets/imgs/seta-direita.png" alt="Seta para proxima imagem" />
+          </a>
+        </div>
+      </section>
+
+      <section id="publico-alvo">
+        <div class="container-publico-alvo">
+          <!-- Imagens -->
+          <div class="quadro-imagens-publico-alvo">
+            <img
+              src="./src/assets/imgs/prefeitura-publico-alvo.png"
+              alt="Prédio da prefeitura de Porto Alegre alagado"
+            />
+            <img
+              src="./src/assets/imgs/defesa-civil-publico-alvo.png"
+              alt="Equipe da defesa civil em atuação"
+            />
+            <img
+              src="./src/assets/imgs/agente-comunitario-publico-alvo.png"
+              alt="Agente comunitário verificando a área"
+            />
+            <img
+              src="./src/assets/imgs/comunidades-publico-alvo.png"
+              alt="Moradores sendo resgatados em enchentes"
+            />
+          </div>
+
+          <!-- Conteudo texto + titulo + card a direita -->
+          <div class="conteudo-direita-publico-alvo">
+            <div class="conteudo-publico-alvo">
+              <h2>Para quem é o Hydro Safe?</h2>
+            </div>
+            <div class="cards-publico-alvo">
+              <article class="icone-esquerda-publico">
+                <img src="./src/assets/imgs/icone-1-publico-alvo.png" alt="Icone de casa em meio enchente" />
+                <p>
+                  Oferecemos soluções para comunidades e autoridades enfrentarem
+                  desastres naturais e áreas de risco com segurança e eficácia.
+                </p>
+              </article>
+              <article>
+                <img src="./src/assets/imgs/icone-2-publico-alvo.png" alt="Icone de prefeitura" />
+                <p>
+                  Trabalhamos junto a órgãos públicos para promover proteção
+                  preventiva, monitoramento contínuo e ações seguras em
+                  emergências.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="beneficios">
+        <h2>Benefícios que garantem segurança e eficiência</h2>
+        <!-- Container dos cards -->
+        <div class="cards-container">
+          <!-- Card de beneficio -->
+          <div class="card-beneficio">
+            <img src="./src/assets/imgs/escudo.png" alt="Icone de escudo">
+            <h3>Proteção em primeiro lugar</h3>
+            <p>Proteção ativa para moradores em áreas de risco.</p>
+          </div>
+          <!-- Card de beneficio -->
+          <div class="card-beneficio">
+            <img src="./src/assets/imgs/alarme.png" alt="Icone de alarme">
+            <h3>Avisos em tempo real</h3>
+            <p>Tempo de reação antes que o pior aconteça.</p>
+          </div>
+          <!-- Card de beneficio -->
+          <div class="card-beneficio">
+            <img src="./src/assets/imgs/graficos.png" alt="Icone de uma tela com gráficos dentro">
+            <h3>Decisões mais inteligentes</h3>
+            <p>Apoio a autoridades com dados precisos e em tempo real.</p>
+          </div>
+          <!-- Card de beneficio -->
+          <div class="card-beneficio">
+            <img src="./src/assets/imgs/pessoas.png" alt="Icone de um grupo de pessoas">
+            <h3>Comunidade preparada</h3>
+            <p>População orientada com ações claras para agir em emergências.</p>
+          </div>
+        </div>
+      </section>
+      
+        <section id="impactos">
+          <h1>Impactos real na vida das pessoas</h1>
+          <div class="impactos-container">
+            <div class="primeira-bola bola">
+              <h3>Alertas na palma da mão</h3>
+            </div>
+
+            <div class="segunda-bola bola">
+              <h3>Buzina de emergência nas ruas</h3>
+            </div>
+
+            <div class="terceira-bola bola">
+              <h3>Evacuação orientada</h3>
+            </div>
+
+            <div class="quarta-bola bola">
+              <h3>Monitoramento contínuo</h3>
+            </div>
+
+          </div>
+        </section>
+     
+      <section id="quiz">
+        <h2>Você está pronto para enfrentar as enchentes?</h2>
+        <p>
+          Descubra o quanto você sabe sobre prevenção de enchentes e a
+          tecnologia da HydroSafe.
+        </p>
+        <button class="start-btn">Começar quiz</button>
+        <!-- Caixa do quiz -->
+        <div class="hidden quiz-box">
+          <!-- Container onde a pergunta será exibida -->
+          <div class="question-container">
+            <p class="question-text">Pergunta</p>
+          </div>
+          <!-- Container onde as respostas serão exibidas -->
+          <div class="answers-container"></div>
+          <!-- Container com botões de navegação -->
+          <div class="quiz-controls">
+            <button id="prev" class="nav-btn">&#8249;</button>
+            <button id="next" class="nav-btn">&#8250;</button>
+            <button id="finish" class="nav-btn hidden">Finalizar</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato">
+        <div class="contato-container">
+          <div class="contato-info">
+            <h3>Entre em contato<br />conosco</h3>
+            <p>Endereço: R. Cordeirano Durand</p>
+            <p>Telefone: +55 11 4002-8922</p>
+            <div class="icones-sociais">
+              <a href="https://www.facebook.com/"
+                ><img src="./src/assets/imgs/facebook-icon.png" alt="Facebook"
+              /></a>
+              <a href="https://www.instagram.com/"
+                ><img
+                  src="./src/assets/imgs/instagram-icon.png" alt="Instagram"
+              /></a>
+              <a href="https://x.com/"
+                ><img src="./src/assets/imgs/X-icon.png" alt="X(Twitter)"
+              /></a>
+            </div>
+          </div>
+
+          <form id="form-contato" class="formulario-contato">
+            <small>Quando visto sem óticas pessoais é irrelevante</small>
+            <input type="text" id="nome" placeholder="Nome" required />
+            <input type="email" id="email" placeholder="E-mail" required />
+            <textarea
+              id="mensagem"
+              placeholder="Escreva sua mensagem"
+              rows="4"
+              required
+            ></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        HydroSafe © 2025 — Tecnologia e prevenção para comunidades mais seguras.
+      </p>
+    </footer>
+  </body>
+  <script src="/src/js/app.js"></script>
+</html>
